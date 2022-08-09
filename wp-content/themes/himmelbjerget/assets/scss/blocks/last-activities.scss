@@ -1,0 +1,36 @@
+.last-posts__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    a {
+        flex-shrink: 0;
+    }
+}
+
+.last-posts__item {
+    width: 100%;
+    height: 217px;
+
+    @media (max-width: $mobile) {
+        height: 189px;
+    }
+}
+
+.last-posts__title {
+    margin: 0;
+}
+
+.last-posts__row {
+    display: grid;
+    grid-gap: 23px;
+
+    @media (min-width: $mobile + 1) {
+        grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    }
+
+    @media (min-width: $laptop-portrait) {
+        grid-template-columns: repeat(auto-fill, minmax(330px, 1fr))
+    }
+}

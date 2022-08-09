@@ -1,0 +1,29 @@
+// global
+@import "global/variable";
+@import "global/fonts";
+@import "global/normalize";
+@import "global/global";
+
+// components
+@import "components/header";
+@import "components/footer";
+@import "components/cards";
+
+// pages
+@import "pages/404";
+
+//blocks
+@import "blocks/content-and-card";
+@import "blocks/content-and-images";
+@import "blocks/content-routes";
+@import "blocks/content-with-anchors";
+@import "blocks/content-slider";
+@import "blocks/last-activities";
+@import "blocks/instagram-feeds";
+@import "blocks/page-head";
+@import "blocks/person-cards";
+@import "blocks/person-board";
+@import "blocks/big_card";
+@import "blocks/editor";
+@import "blocks/read-more";
+

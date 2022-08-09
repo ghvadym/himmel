@@ -1,0 +1,61 @@
+.content-images {
+    position: relative;
+
+    @media (min-width: $laptop-portrait + 1) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @media (max-width: $laptop-portrait) {
+        & + .img-bg {
+            top: 150px;
+        }
+    }
+}
+
+.content-images__content {
+    @media (min-width: $laptop-portrait + 1) {
+        max-width: 540px;
+    }
+}
+
+.content-images__img {
+    flex-shrink: 0;
+    margin-left: auto;
+    width: fit-content;
+
+    @media (min-width: $laptop-portrait + 1) {
+        margin-right: 80px;
+    }
+
+    @media (max-width: $laptop-portrait) {
+        margin-bottom: 40px;
+
+        img {
+            height: 188px;
+        }
+    }
+
+    img {
+        width: auto;
+        object-fit: contain;
+    }
+}
+
+.content-images__subtitle {
+    margin-bottom: 30px;
+}
+
+@media (min-width: $laptop-portrait + 1) {
+    .content-images__title-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: $laptop-portrait) {
+    .content-images__title {
+        display: none;
+    }
+}
+

@@ -1,0 +1,23 @@
+.read-more__title {
+    margin-bottom: 20px;
+
+    @media (max-width: $mobile) {
+        margin-bottom: 10px;
+    }
+}
+
+.read-more__link {
+    padding: 0 15px;
+
+    @media (max-width: $mobile) {
+        padding: 0 10px;
+    }
+}
+
+.read-more__row {
+    margin: 0 -15px;
+
+    @media (max-width: $mobile) {
+        margin: 0 -10px;
+    }
+}

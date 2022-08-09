@@ -1,0 +1,171 @@
+.site-footer {
+    max-width: 1200px;
+    width: 100%;
+    margin: 50px auto 0;
+    position: relative;
+}
+
+.scroll-top {
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    color: $color-main;
+    font-weight: 700;
+    font-size: 1.4rem;
+
+    @extend .cursor-pointer;
+
+    @media (min-width: 1025px) {
+        transition: ease 0.5s;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    @media (max-width: 1280px) {
+        right: 20px;
+    }
+}
+
+.footer {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #524D4D;
+    padding: 100px 60px 80px;
+    clip-path: $polygon-footer;
+
+    @media (max-width: $mobile) {
+        clip-path: polygon(0 0%, 100% 0, 100% 96%, 0 100%);
+        padding: 40px 20px 60px;
+    }
+
+    p, span {
+        color: $color-light;
+    }
+}
+
+.footer__col {
+    width: 100%;
+
+    @media (min-width: $laptop-portrait + 1) {
+        max-width: calc(100% / 3 - 40px);
+
+        &:nth-child(2) {
+            margin: 0 20px;
+        }
+    }
+
+    @media (max-width: $laptop-portrait) {
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.footer__menu {
+    margin-bottom: 40px;
+
+    @media (min-width: $laptop-portrait + 1) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media (max-width: $laptop-portrait) {
+        margin-bottom: 20px;
+    }
+}
+
+.footer__note {
+    margin-bottom: 45px;
+    color: $color-light;
+    font-size: 1.4rem;
+
+    @media (max-width: $laptop-portrait) {
+        margin-bottom: 70px;
+        font-size: 1.6rem;
+    }
+}
+
+.hours__list {
+    font-size: 1.4rem;
+}
+
+.hours__item {
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    & > span {
+        display: block;
+    }
+}
+
+.hours__title {
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.footer-title, .widget__title {
+    color: $color-light;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.widget__text {
+    p {
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+.footer__nav {
+    .menu-item {
+        margin-bottom: 5px;
+
+        @media (max-width: $laptop-portrait) {
+            margin-bottom: 5px;
+        }
+
+        a {
+            color: $color-light;
+            font-weight: 700;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+
+            @media (min-width: 1025px) {
+                transition: ease 0.5s;
+
+                &:hover {
+                    opacity: 1;
+                    color: $color-main;
+                }
+            }
+
+            @media (max-width: $laptop-portrait) {
+                font-size: 1.6rem;
+            }
+        }
+
+        &.current_page_item {
+            & > a {
+                color: $color-main;
+            }
+        }
+    }
+}
+
+.widget__social {
+    margin-top: 10px;
+}
+
+.social_item {
+    width: 20px;
+    height: 20px;
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}

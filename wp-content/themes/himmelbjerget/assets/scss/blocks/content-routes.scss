@@ -1,0 +1,49 @@
+.route__item {
+    display: flex;
+    align-items: center;
+    padding: 18px 0;
+    border-top: 1px solid #E5E5E5;
+
+    &:last-child {
+        border-bottom: 1px solid #E5E5E5;
+    }
+}
+
+.route__item_link {
+    margin-left: auto;
+    flex-shrink: 0;
+
+    @media (max-width: $laptop-portrait) {
+        font-size: 1.4rem;
+    }
+}
+
+.route__item_title {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.route__item_subtitle {
+    font-size: 1.2rem;
+}
+
+@media (min-width: $laptop-portrait + 1) {
+    .content-routes__body {
+        column-count: 2;
+        column-gap: 60px;
+    }
+
+    .route__col {
+        page-break-inside: avoid;
+        break-inside: avoid-column;
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: $laptop-portrait) {
+    .route__col {
+        &:not(:first-child) {
+            margin-top: 55px;
+        }
+    }
+}

@@ -1,0 +1,86 @@
+.person-board__item {
+    background-color: #F1F1F1;
+}
+
+.person-board__title {
+    span {
+        margin-left: 5px;
+    }
+}
+
+.person-board__subtitle {
+    color: $color-main;
+}
+
+.person-board__body {
+    border-top: 1px solid $color-light;
+    padding-top: 25px;
+    margin-top: 20px;
+
+    p {
+        margin: 0;
+    }
+
+    ul {
+        li {
+            padding-left: 15px;
+
+            &:before {
+                content: '';
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: $color-dark;
+                display: inline-block;
+                vertical-align: top;
+                margin-right: -4px;
+                position: relative;
+                left: -15px;
+                top: 9px;
+            }
+        }
+    }
+
+    ul, ol {
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: $laptop-portrait + 1) {
+    .person-board {
+        column-count: 2;
+        column-gap: 40px;
+    }
+
+    .person-board__item {
+        page-break-inside: avoid;
+        break-inside: avoid-column;
+        margin-bottom: 40px;
+        padding: 46px 40px 50px;
+    }
+
+    .person-board__title {
+        margin-bottom: 5px;
+    }
+
+    .person-board__body {
+        padding-top: 25px;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: $laptop-portrait) {
+    .person-board__item {
+        margin-bottom: 20px;
+        padding: 24px 23px;
+    }
+
+    .person-board__body {
+        padding-top: 15px;
+        margin-top: 10px;
+    }
+
+    .person-board__title {
+        margin-bottom: 0;
+    }
+}
